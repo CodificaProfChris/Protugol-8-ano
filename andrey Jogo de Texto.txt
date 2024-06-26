@@ -1,0 +1,77 @@
+programa
+{
+inclua biblioteca Util --> util
+funcao inicio()
+{
+  cadeia nome
+  inteiro classe, vida, atk, def
+
+
+  escreva("\n➤Nome: ")
+  leia(nome)
+  escreva("\nSeja bem vindo(a) a FlopTropica, ", nome, "!")
+  escreva("\n\n┎Selecione uma classe abaixo:┚ ")
+
+  escreva("\n1 ⸻⊱ Atirador De Produtos Da Jiafei ")
+  escreva("\n2 ⸻⊱ Guerreiro Da Presidente Deborah ")
+  escreva("\n3 ⸻⊱ Pisador Treinado por Aghata Nunes ")
+  escreva("\n➤ ")
+  leia(classe)
+
+  se(classe == 1)
+  {
+    vida = 28
+    atk = 10
+    def = 20
+  }
+  se(classe == 2)
+  {
+    vida = 35
+    atk = 15
+    def = 5
+  }
+  se(classe == 3)
+  {
+    vida = 15
+    atk = 25
+    def = 7
+  }
+  limpa()
+
+  inteiro opcao = 0
+
+  enquanto(opcao != 3 e vida > 0){
+
+   escreva("\n꧁MENU꧂ ")
+   escreva("\n\n↳ 1. Lutar ")
+   escreva("\n↳ 2. Boss ")
+   escreva("\n↳ 3. Sair ")
+   escreva("\n➤ ")
+   leia(opcao)
+
+   se(opcao == 1){
+    limpa()
+
+   inteiro hp_enimigo, atk_enimigo, def_enimigo
+   
+   hp_enimigo = util.sorteia(20, 30)
+   atk_enimigo = util.sorteia(7, 12)
+   def_enimigo = util.sorteia(5, 10)
+
+   escreva("➢➢〤 EM BATALHA! 〤➢➢")
+   enquanto(vida > 0 e hp_enimigo > 0){
+    escreva("\n\n⟣Personagem⟢ ")
+    escreva("\n➺ Vida: ", vida)
+    escreva("\n➺ Ataque: ", atk)
+    escreva("\n➺ Defesa: ", def)
+
+    escreva("\n\nᔙDaBoyz (Enimigo)ᔘ ")
+    escreva("\n➺ Vida: ", hp_enimigo)
+    escreva("\n➺ Ataque: ", atk_enimigo)
+    escreva("\n➺ Defesa: ", def_enimigo)
+
+   }
+   }
+  }
+  }
+}
