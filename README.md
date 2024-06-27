@@ -1,4 +1,4 @@
-Projeto: Jogo de Texto
+# Projeto: Jogo de Texto
 
 Escola: Leaders School
 
